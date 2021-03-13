@@ -16,8 +16,9 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
+            alias python=python2.7
             pip install --upgrade pip
-            pip3 install -r calc/requirements.txt
+            pip install -r calc/requirements.txt
       # Step 3: run linter and tests
       - run:
           name: run tests
